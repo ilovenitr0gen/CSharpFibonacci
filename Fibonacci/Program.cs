@@ -48,7 +48,7 @@ namespace Fibonacci
             Console.WriteLine("Enter an integer to choose the term of the fibonacci sequence to calculate: ");
             
             BigInteger toCountTo = Convert.ToUInt64(Console.ReadLine());
-            toCountTo -= 3;
+            toCountTo -= 2;
             
             Console.WriteLine("Calculating...");
             var s = new Stopwatch();
@@ -90,6 +90,13 @@ namespace Fibonacci
             
             var snum = nums.y.ToString();
             Console.WriteLine("This fibonacci term has " + Convert.ToString(snum.Length) + " digits.");
+
+            Console.WriteLine("Do you want to output the number? y/n");
+            string inp = Console.ReadLine();
+            if (inp == "y")
+            {
+                Console.WriteLine(nums.y);
+            }
         }
     }
 }
